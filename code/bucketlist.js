@@ -17,7 +17,7 @@ exports.handler = (event, context, callback) => {
 		}
 		else{
 			var allBuckets = data.Buckets;
-			console.log("All Buckets collected);
+			console.log("This Demo version Function: V 0.1");
 			console.log("Total bucket count is: " + allBuckets.length);
 			callback(null, {
 				statusCode: 200,
