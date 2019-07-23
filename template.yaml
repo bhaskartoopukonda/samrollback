@@ -50,6 +50,8 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: preTrafficHook.handler
+      Runtime: nodejs8.10
+      CodeUri: code/
       Policies:
         - Version: "2012-10-17"
           Statement:
@@ -64,8 +66,6 @@ Resources:
             Action:
               - "lambda:InvokeFunction"
             Resource: !Ref returnS3Buckets.Version
-      Runtime: nodejs8.10
-      CodeUri: code/
       FunctionName: 'CodeDeployHook_preTrafficHook_rollback'
       DeploymentPreference:
         Enabled: false
