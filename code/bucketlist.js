@@ -18,7 +18,7 @@ exports.handler = (event, context, callback) => {
 		else{
 			var allBuckets = data.Buckets;
 			console.log("Total bucket count is: " + allBuckets.length);
-			console.log("Function Version 2");
+			console.log("Function Version 3-suspected Rollback");
 			callback(null, {
 				statusCode: 200,
 				body: allBuckets.length
