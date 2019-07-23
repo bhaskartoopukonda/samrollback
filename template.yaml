@@ -65,6 +65,7 @@ Resources:
               - "lambda:InvokeFunction"
             Resource: !Ref returnS3Buckets.Version
       Runtime: nodejs8.10
+      CodeUri: code/
       FunctionName: 'CodeDeployHook_preTrafficHook_rollback'
       DeploymentPreference:
         Enabled: false
